@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+ {% load static %}
+<html>
+    <head>
+        <title>Homepage</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static './index.css'%}">
+    </head>
+    <body>
+        <nav class="navbar">
+            <ol>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Signup</a></li>
+                <li><input type="text" name="search" placeholder="Search"><input type="button" class="Btn" value="Search"></li>
+            </ol>
+        </nav>
+    </body>
+</html>
