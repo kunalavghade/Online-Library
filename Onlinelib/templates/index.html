@@ -1,20 +1,42 @@
-<!DOCTYPE html>
- {% load static %}
-<html>
-    <head>
-        <title>Homepage</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{% static './index.css'%}">
-    </head>
-    <body>
-        <nav class="navbar">
-            <ol>
-                
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Signup</a></li>
-                <li><input type="text" name="search" placeholder="Search"><input type="button" value="Search"></li>
-            </ol>
-        </nav>
-    </body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Homepage</title>
+  </head>
+  <body>
+<!--Navigation bar-->
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Login</a>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">About Us</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Git-Hub</a></li>
+          <li><a class="dropdown-item" href="#">Linkdin</a></li>
+          <li><a class="dropdown-item" href="#">Instagram</a></li>
+        </ul>
+      </li>
+</ul>
+<!--page containt-->
+<div class="img-src">
+    <img src="https://source.unsplash.com/weekly?book" alt="any book image" width="350" height="275">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, ipsum iusto.<br>
+    Similique ut itaque modi earum nobis. Sint, consequuntur. Sapiente eos et aspernatur! Quod, rem? <br>hellghbmsdmmsdhmhvs dhhmfhsdmfgs bmhsdbhmsfvgsydg   dmbfsdg
+</div>
+<!--Lorem-->
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  </body>
 </html>
