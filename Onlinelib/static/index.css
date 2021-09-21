@@ -41,8 +41,10 @@ header ul li a.nav-link
     vertical-align:top;
 }
 /* If you want hover effect */
-/*header ul li a.nav-link:hover
+header ul li a.nav-link:hover
 {
-    background-color: rgb(142, 248, 142);
+    background-color: white;
+	font-weight:bold;
     border-radius:12px;
-}*/
+	color:#6F69AC;
+}
