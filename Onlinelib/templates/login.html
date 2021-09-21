@@ -1,9 +1,12 @@
 <!doctype html>
+{%load static%}
 <html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Our Manual CSS-->
+    <link rel="stylesheet" href="{%static 'login.css'%}">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -11,13 +14,36 @@
     <title>Login Page</title>
   </head>
   <body>
-        <form method="POST">
+<header> 
+   <ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link" id="logo" href="#">Online-Library</a>
+  </li>  
+  <li class="nav-item">
+      <a class="nav-link" href="#">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./signup">Signup</a>
+  </li>
+  <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">About Us</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Git-Hub</a></li>
+        <li><a class="dropdown-item" href="#">Linkdin</a></li>
+        <li><a class="dropdown-item" href="#">Instagram</a></li>
+      </ul>
+    </li>
+</ul>
+</header>
+<center>
+<form method="POST">
           {% csrf_token %}
             <input type="text" placeholder="Username" name="username"><br><br>
             <input type="password" placeholder="Password" name="password"><br><br>
             <input type="submit" value="Login" class="btn btn-primary">
             <p>If you don't have any accout then <a href ="./signup">Click here</a></p>
         </form>
+      </center>        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   </body>
 </html>

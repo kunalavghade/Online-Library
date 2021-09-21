@@ -1,0 +1,49 @@
+body
+{
+    background-color: #ffefb4;
+}
+header
+{
+    margin-top: 2.5px;
+    background-color:#6F69AC;
+    border-style:none;
+    border-radius:12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color:white;
+}
+#logo
+{
+    font-family: cursive;
+    color:rgb(5, 197, 255);
+}
+header ul li
+{
+    padding:12px;
+}
+header ul li a.nav-link
+{
+    color:white;
+}
+.containt p
+{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:bold;
+    text-align:right;
+    vertical-align:top;
+}
+/* If you want hover effect */
+header ul li a.nav-link:hover
+{
+    background-color: white;
+	font-weight:bold;
+    border-radius:12px;
+	color:#6F69AC;
+}
+form
+{
+    margin-top:150px;
+    padding:25px;
+    background-color: rgb(212, 212, 245);
+    width:fit-content;
+    border-radius:9px;
+}
