@@ -1,0 +1,31 @@
+header
+{
+    margin-top: 2.5px;
+    background-color:ghostwhite;
+    border-style:none;
+    border-radius:12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#logo
+{
+    font-family: cursive;
+    color:rgb(5, 197, 255);
+}
+img
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 25px;
+    margin-left: 17px;
+    border-radius: 12px;
+}
+header ul li
+{
+    padding:12px;
+}
+
+/* If you want hover effect */
+/*header ul li a.nav-link:hover
+{
+    background-color: rgb(142, 248, 142);
+    border-radius:12px;
+}*/

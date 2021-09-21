@@ -11,12 +11,17 @@
     <title>Sign up</title>
   </head>
   <body>
+
         <form method="POST">
           {% csrf_token %}
             <input type="text" placeholder="Username" name="username" required><br><br>
+            <input type="email" placeholder="Email" name="email" required><br><br>
+            <input type="number" placeholder="Contact Number" name="phone"><br><br>
+            <input type="address" placeholder="Address" name="address"><br><br>
             <input type="password" placeholder="Password" name="password" required><br><br>
             <input type="submit" value="Create Account">
         </form>
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   </body>
 </html>
