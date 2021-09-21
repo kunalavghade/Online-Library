@@ -4,6 +4,8 @@ from library.models import Student
 # Create your views here.
 def index(request):
     return render(request,'index.html')
+def main(request):
+    return render(request,'main.html')    
 def signup(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -14,7 +16,7 @@ def signup(request):
         date = request.POST.get('date')
         data = Student(date=date,name=username,email=email,phone=phone,address=address,password=password)
         data.save()
-        print(username,email,phone,address,password,date)
+        #print(username,email,phone,address,password,date)
     return render(request,"signup.html")    
 
 def login(request):
@@ -24,7 +26,7 @@ def login(request):
         try:
             data=Student.objects.get(name=username,password=password)
             print(data.name, data.password)
-            return render(request,'index.html')
+            return render(request,'main.html')
         except:
             return render(request,'login.html')
     return render(request,'login.html')        
