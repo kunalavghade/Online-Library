@@ -1,5 +1,5 @@
 <!doctype html>
-{%load static %}
+{% load static %}
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -37,89 +37,21 @@
 <div class="album py-2 px-2 bg-none">
   <div class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      {% for Book in Books.all %}
       <div class="col">
         <div class="card shadow-sm">
-          <img src="https://source.unsplash.com/200x200/?book">
+          <img src="{{ Book.book_cover.url }}">
           <div class="card-body">
-            <p class="card-text">This is a  book written by unknown auther.</p>
+            <p class="card-text">{{Book.book_name}}<br>{{Book.authour}}</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Download</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card shadow-sm">
-<img src="https://source.unsplash.com/200x200/?Yogurt">
-          <div class="card-body">
-            <p class="card-text">This is a  book written by unknown auther.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card shadow-sm">
-<img src="https://source.unsplash.com/200x200/?coffee">
-          <div class="card-body">
-            <p class="card-text">This is a  book written by unknown auther.</p>
-                <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card shadow-sm">
-<img src="https://source.unsplash.com/200x200/?Broccoli">
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card shadow-sm">
-<img src="https://source.unsplash.com/200x200/?Oatmeal">
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card shadow-sm">
-<img src="https://source.unsplash.com/200x200/?burger">
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </div>       

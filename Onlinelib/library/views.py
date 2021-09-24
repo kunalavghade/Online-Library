@@ -1,11 +1,14 @@
-from django.shortcuts import render,HttpResponse
-from library.models import Student
+from django.shortcuts import render,HttpResponse,redirect
+from library.models import Student,books
 
 # Create your views here.
 def index(request):
     return render(request,'index.html')
+
 def main(request):
-    return render(request,'main.html')    
+    Books = books.objects
+    return render(request,'main.html', { 'Books' : Books} )    
+
 def signup(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -26,7 +29,7 @@ def login(request):
         try:
             data=Student.objects.get(name=username,password=password)
             print(data.name, data.password)
-            return render(request,'main.html')
+            return redirect('./main')
         except:
             return render(request,'login.html')
     return render(request,'login.html')        
