@@ -12,14 +12,14 @@
 
     <title>Sign up</title>
   </head>
-  <body>
+  <body background="https://source.unsplash.com/weekly?books">
 <header>
   <ul class="nav nav-pills">
     <li class="nav-item">
       <a class="nav-link" id="logo" href="#">Online-Library</a>
     </li>  
     <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="./index">Home</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="./login">Login</a>
@@ -27,9 +27,9 @@
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">About Us</a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Git-Hub</a></li>
+          <li><a class="dropdown-item" href="https://github.com/kunalavghade/">Git-Hub</a></li>
           <li><a class="dropdown-item" href="#">Linkdin</a></li>
-          <li><a class="dropdown-item" href="#">Instagram</a></li>
+          <li><a class="dropdown-item" href="https://www.instagram.com/kunalavghade/">Instagram</a></li>
         </ul>
       </li>
 </ul>
@@ -39,9 +39,9 @@
     {% csrf_token %}
       <input type="text" placeholder="Username" name="username" required><br><br>
       <input type="email" placeholder="Email" name="email" required><br><br>
-      <input type="number" placeholder="Contact Number" name="phone"><br><br>
-      <input type="date" name="date"><br><br>
-      <input type="address" placeholder="Address" name="address"><br><br>
+      <input type="number" placeholder="Contact number" name="phone"required><br><br>
+      <input type="date" name="date"required><br><br>
+      <input type="address" placeholder=" Enter Address" name="address"><br><br>
       <input type="password" placeholder="Password" name="password" required><br><br>
       <input type="submit" value="Create Account" class="btn btn-primary">
 </form>

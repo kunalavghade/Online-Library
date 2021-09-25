@@ -1,5 +1,6 @@
 body
 {
+
     background-color: #ffefb4;
 }
 
@@ -9,7 +10,8 @@ header
     margin-top: 2.5px;
     background-color:#6F69AC;
     border-style:none;
-    border-radius:12px;
+    border-bottom-right-radius:12px;
+    border-bottom-left-radius: 12px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color:white;
 }
@@ -33,23 +35,16 @@ header ul li a.nav-link
 {
     color:white;
 }
-table
+.text
 {
-    border:none;
+    margin-top:250px;
+    font-weight:400;
+    color:white;
+    font-size:21px;
 }
-table td
-{
-    padding:12px;
-}
-table td q
-{
-    padding:12px;
+.text q{
+    font-family:cursive;
     font-style: italic;
-    font-weight:105;
-}
-table td p
-{
-    padding:12px;
 }
 /* If you want hover effect */
 header ul li a.nav-link:hover

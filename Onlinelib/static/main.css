@@ -21,7 +21,7 @@ header
 img
 {
     border-radius: 12px;
-    height: 200px;
+    height:300px;
 }
 header ul li
 {
@@ -43,4 +43,21 @@ header ul li a.nav-link:hover
 	font-weight:bold;
     border-radius:12px;
 	color:#6F69AC;
+}
+.search_bar{
+    border-top-left-radius:9px;
+    border-bottom-left-radius:9px;
+    padding: 4px;
+    width:660px;
+    height:38px;
+    border-style:none;
+    margin-top:4x;
+}
+.search_btn{
+    margin-right: 12px;
+    height:38.5px;
+    border-top-right-radius:9px;
+    border-bottom-right-radius:9px;
+    background-color:white;
+    border-style: none;
 }

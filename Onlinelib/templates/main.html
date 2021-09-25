@@ -27,15 +27,15 @@
           <li class="nav-item">
             <form method="POST">
             {% csrf_token %}
-            <input type="text" placeholder="Serach Here" name =search><input type="submit"> 
+            <input type="text" placeholder="Serach Here" name =search class="search_bar"><input type="submit" value="Search" class="search_btn"> 
           </form>
           </li>
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">About Us</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Git-Hub</a></li>
+                <li><a class="dropdown-item" href="https://github.com/kunalavghade/">Git-Hub</a></li>
                 <li><a class="dropdown-item" href="#">Linkdin</a></li>
-                <li><a class="dropdown-item" href="#">Instagram</a></li>
+                <li><a class="dropdown-item" href="https://www.instagram.com/kunalavghade/">Instagram</a></li>
               </ul>
             </li>
       </ul>
@@ -48,10 +48,10 @@
         <div class="card shadow-sm">
           <img src="{{ Book.book_cover.url }}">
           <div class="card-body">
-            <p class="card-text">{{Book.book_name}}<br>{{Book.authour}}</p>
+            <p class="card-text"><b>BOOK NAME :</b>{{Book.book_name}}<br><b>AUTHOUR NAME :</b>{{Book.authour}}</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">Download</button>
+              <a href="{{Book.link}}"><button type="submit" class="btn btn-sm btn-outline-secondary">Download</button></a>
               </div>
             </div>
           </div>
