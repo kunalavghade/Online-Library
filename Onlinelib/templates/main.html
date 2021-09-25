@@ -22,10 +22,13 @@
               <a class="nav-link" href="./index">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./login">Logout</a>
+            <a class="nav-link" href="./logout">Logout</a>
           </li>
           <li class="nav-item">
-            <input type="text" placeholder="Serach Here"><input type="button" value="Search"> 
+            <form method="POST">
+            {% csrf_token %}
+            <input type="text" placeholder="Serach Here" name =search><input type="submit"> 
+          </form>
           </li>
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">About Us</a>
