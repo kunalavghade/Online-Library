@@ -1,6 +1,7 @@
 body
 {
     background-color: #ffefb4;
+    filter: blur(8px);
 }
 header
 {

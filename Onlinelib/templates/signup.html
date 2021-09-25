@@ -12,7 +12,7 @@
 
     <title>Sign up</title>
   </head>
-  <body>
+  <body background="https://source.unsplash.com/weekly?books">
 <header>
   <ul class="nav nav-pills">
     <li class="nav-item">
@@ -39,9 +39,9 @@
     {% csrf_token %}
       <input type="text" placeholder="Username" name="username" required><br><br>
       <input type="email" placeholder="Email" name="email" required><br><br>
-      <input type="number" placeholder="Contact Number" name="phone"required><br><br>
+      <input type="number" placeholder="Contact number" name="phone"required><br><br>
       <input type="date" name="date"required><br><br>
-      <input type="address" placeholder="Address" name="address"><br><br>
+      <input type="address" placeholder=" Enter Address" name="address"><br><br>
       <input type="password" placeholder="Password" name="password" required><br><br>
       <input type="submit" value="Create Account" class="btn btn-primary">
 </form>

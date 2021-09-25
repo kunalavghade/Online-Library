@@ -35,23 +35,16 @@ header ul li a.nav-link
 {
     color:white;
 }
-table
+.text
 {
-    border:none;
+    margin-top:250px;
+    font-weight:400;
+    color:white;
+    font-size:21px;
 }
-table td
-{
-    padding:12px;
-}
-table td q
-{
-    padding:12px;
+.text q{
+    font-family:cursive;
     font-style: italic;
-    font-weight:105;
-}
-table td p
-{
-    padding:12px;
 }
 /* If you want hover effect */
 header ul li a.nav-link:hover
