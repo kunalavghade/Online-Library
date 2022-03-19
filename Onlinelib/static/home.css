@@ -1,0 +1,93 @@
+.bg{
+    background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('baground.jpg');
+    color: white;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: auto;
+
+}
+.greeting {
+    text-align: center;
+}
+
+.greeting button{
+    width: 280px;
+    height: 50px;
+    border:none;
+    border:solid 1px white;
+    background: rgba(255, 255, 255,0);
+    font-size: 23px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.greeting button:hover {
+    background-color: brown;
+     color:#f3efe0; 
+}
+
+.greeting h3{
+    font-size: 23px;
+    font-weight: lighter;
+    padding-top: 60px;
+    margin: 0px;
+
+}
+.greeting h2{
+    margin-top: 20px;
+    font-weight: lighter;
+    font-family: fangsong;
+    font-size: 40px;
+}
+
+.bg hr{
+    height: 1px;
+    background-color: white;
+}
+
+.section h1{
+    float: left;
+    width: 33.3%;
+    text-align: center;
+    font-weight: normal;
+    font-size: 25px;
+    color: white;
+}
+
+.container{
+    width: 90%;
+    margin-left: 5%;
+}
+
+.container h2{
+    font-weight: normal;
+    font-family: fangsong;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.box h3{
+    color: #003000;
+}
+.container hr{
+    width: 100%;
+    height: 4px;
+    background-color: #5c4033;
+}
+
+.box ul{
+    color: #003000;
+}
+.box{
+    float: left;
+    width: 25%;
+}
+
+@media screen and (max-width: 600px) {
+    .box{
+        width: 50%;
+    }
+    .section h1{
+        width: 100%;
+    }
+}

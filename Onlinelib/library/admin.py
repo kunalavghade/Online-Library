@@ -1,9 +1,9 @@
 from django.contrib import admin
-from library.models import Student,books
+from . models import Student,books,ContactUs
 
 
 class StudentAdmin(admin.ModelAdmin):
-	list_display = ('name','email','phone')
+	list_display = ('firstName','firstName','email','phone','password')
 
 
 class BookAdmin(admin.ModelAdmin):

@@ -1,14 +1,17 @@
 from django.db import models
-
 # Create your models here.
+
 class Student(models.Model):
-	date = models.DateField()
-	name = models.CharField(max_length=50)
-	email= models.EmailField(max_length=50)
+	firstName = models.CharField(max_length = 50)
+	lastName = models.CharField(max_length = 50)
+	email = models.EmailField(max_length = 254)
 	phone = models.IntegerField()
-	address = models.CharField(max_length = 100)
 	password = models.CharField(max_length = 50)
 
+class ContactUs(models.Model):
+	your_name = models.CharField(max_length = 50)
+	email_address = models.EmailField(max_length = 254)
+	Your_message = models.CharField(max_length = 1024)
 
 class books(models.Model):
 	book_cover = models.ImageField(upload_to="images/")
