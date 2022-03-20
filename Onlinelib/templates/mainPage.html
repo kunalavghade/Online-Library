@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="../static/nav.css">
-        <link rel="stylesheet" href="../static/home.css">
-        <link rel="stylesheet" href="../static/main.css">
-        <link rel="stylesheet" href="../static/grid.css">
+        <link rel="stylesheet" href="static/nav.css">
+        <link rel="stylesheet" href="static/home.css">
+        <link rel="stylesheet" href="static/main.css">
+        <link rel="stylesheet" href="static/grid.css">
     </head>
     <body>
         
@@ -15,18 +16,18 @@
             <i><a href="#">Online-Lib</a></i>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i></a>
-            <a href="#home" class="active">Home</a>
-            <a href="/login">Login</a>
+            <a href="." class="active">Home</a>
             <a href="contactus">Contact</a>
             <a href="about">About</a>
+            <a href="./logout">Logout</a>
         </div>
         <div class="upper-container">
             <h1>All you need is here</h1>
-
             <div class="search">
-                <form class="search-form">
-                    <input type="text" placeholder="Search for books, authors, categories and more..">
-                    <button type="submit" value="Submit" class="fa fa-search">
+                <form class="search-form" method="POST">
+                    {% csrf_token %}
+                    <input type="text" placeholder="Search for books, authors, categories and more.." name=search>
+                    <button  type="submit" value="Submit" class="fa fa-search">
                 </form>
             </div>
             <hr>
@@ -36,52 +37,19 @@
 
 
         <div class="grid">
-            
+            {% for Book in Books.all %}
             <div class="box">
                 <div class="box1">
-                    <img src="../static/baground.jpg">
-                    <h4>Book Name: </h4>
-                    <h5>Author Name: </h5>
-                    <h5 class="Discriptions">Discriptions: </h5>
+                    <img src="{{ Book.book_cover.url }}">
+                    <h4>{{Book.book_name}}</h4>
+                    <h5>{{Book.authour}}</h5>
+                    <!-- <h5 class="Discriptions">Discriptions: </h5> -->
+                    <div class="click">
+                    <a clinck href="{{Book.link}}" >Download</a>
+                    </div>
                 </div>
             </div>
-
-            <div class="box">
-                <div class="box1">
-                    <img src="../static/baground.jpg">
-                    <h4>Book Name: </h4>
-                    <h5>Author Name: </h5>
-                    <h5 class="Discriptions">Discriptions: </h5>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="box1">
-                    <img src="../static/baground.jpg">
-                    <h4>Book Name: </h4>
-                    <h5>Author Name: </h5>
-                    <h5 class="Discriptions">Discriptions:</h5>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="box1">
-                    <img src="../static/baground.jpg">
-                    <h4>Book Name: </h4>
-                    <h5>Author Name: </h5>
-                    <h5 class="Discriptions">Discriptions: </h5>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="box1">
-                    <img src="../static/baground.jpg">
-                    <h4>Book Name: </h4>
-                    <h5>Author Name: </h5>
-                    <h5 class="Discriptions">Discriptions: </h5>
-                </div>
-            </div>
-
+            {% endfor %}
         </div>
 
         <script src="../static/index.js"></script>

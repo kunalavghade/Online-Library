@@ -9,14 +9,14 @@ from library.models import Student,books,ContactUs
 def index(request):
     return render(request,'home.html')
 
-# @login_required(login_url='login')
+@login_required(login_url='login')
 def main(request):
     if request.method == 'POST':
         search = request.POST['search']
         Books = books.objects.filter(book_name__icontains=search)
     else:
         Books = books.objects
-    return render(request,'main.html', { 'Books' : Books} )    
+    return render(request,'mainPage.html', { 'Books' : Books} )    
 
 def signup(request):
     if request.method == "POST":

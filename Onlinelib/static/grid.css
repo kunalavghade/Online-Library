@@ -9,7 +9,7 @@
 
 .box1{
 	margin: 10px;
-	/* border: 2px solid black; */
+	border: 2px solid black;
 	border-radius: 20px;
 	background-color: brown;
 	/* text-align: center; */
@@ -27,6 +27,32 @@
 	margin-left: 5%;
 }
 
-.Discriptions{
-	padding-bottom: 15px;
+.click{
+	width: 100%;
+	padding: 10px;
+	background-color: white;
+	border-radius: 20px;
+	text-align: center;
+}
+
+.click a{
+	color: brown;
+	font-weight: bold;	
+}
+
+@media only screen and (min-width : 400px) and (max-width : 800px)
+{
+  .box{
+  	width: 50%
+  }
+
+}
+
+
+@media only screen and (min-width : 200px) and (max-width : 400px)
+{
+  .box{
+  	width: 100%
+  }
+
 }
