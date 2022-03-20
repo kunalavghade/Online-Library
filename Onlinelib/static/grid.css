@@ -1,0 +1,32 @@
+.grid{
+	width: 80%;
+	margin-left: 10%;
+}
+
+.box{
+	width: 25%;
+}
+
+.box1{
+	margin: 10px;
+	/* border: 2px solid black; */
+	border-radius: 20px;
+	background-color: brown;
+	/* text-align: center; */
+}
+
+.box1 img{
+	border-radius: 10px 10px 0px 0px;
+	margin-top: 10px;
+	width: 90%;
+	margin-left: 5%;
+	height: 250px;
+}
+
+.box1 h4,h5{
+	margin-left: 5%;
+}
+
+.Discriptions{
+	padding-bottom: 15px;
+}

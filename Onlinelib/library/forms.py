@@ -1,5 +1,5 @@
 from django import forms
-from . models import Student,ContactUs
+from .models import Student,ContactUs
 
 class Signup(forms.Form):
 	first_name = forms.CharField(max_length = 50,widget=forms.TextInput(attrs={'class':"form-attr","placeholder":"Enter first name"}))

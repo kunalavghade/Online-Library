@@ -1,16 +1,15 @@
 from django.shortcuts import render,HttpResponse,redirect
-from .models import Student,books,ContactUs
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User,auth
 from django.contrib import messages
 from .forms import Signup,Login,ContactUsForm
 from django.core.mail import send_mail, BadHeaderError
-# from .models import 
+from library.models import Student,books,ContactUs
 
 def index(request):
     return render(request,'home.html')
 
-@login_required(login_url='login')
+# @login_required(login_url='login')
 def main(request):
     if request.method == 'POST':
         search = request.POST['search']

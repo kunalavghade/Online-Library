@@ -1,63 +1,85 @@
-body
+.res{
+    margin-left: 5%;
+    font-family: fangsong;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.break-hr
 {
-    background-color: #ffefb4;
+    margin-left: 5%;
+    width: 90%;
+    height: 4px;
+    background-color: #5c4033;
 }
 
 
-header
+.upper-container{
+    background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('baground.jpg');
+    color: white;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: auto;
+}
+
+.upper-container h1{
+  margin-left: 25%;
+  margin-top: 0px;
+  padding-top: 20px;
+  font-weight: normal;
+  font-family: fangsong;
+  font-size: 35px;
+}
+
+
+.upper-container hr{
+  padding-bottom:  60px;
+  border-color: transparent;
+}
+
+.search
 {
-    margin-top: 2.5px;
-    background-color:#6F69AC;
-    border-style:none;
-    border-radius:12px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    color:white;
+  border: 2px solid white;
+  overflow: auto;
+  width: 50%;
+  margin-left: 25%;
 }
-#logo
+
+.search input[type="text"]
 {
-    font-family: cursive;
-    color:rgb(5, 197, 255);
+  border: 0px;
+  width: 67%;
+  padding: 10px 10px;
+  color: white;
+  background-color: transparent;
+  font-size: 20px;
 }
-img
+
+.search input[type="text"]:focus
 {
-    border-radius: 12px;
-    height:300px;
+  outline: 0;
 }
-header ul li
+
+.search button
 {
-    padding:12px;
+  border: 0px;
+  background: none;
+  background-color: brown;
+  font-size: 23px;
+  color: #fff;
+  float: right;
+  padding: 10px;
+  cursor:pointer;
 }
-header ul li a.nav-link
+
+
+@media only screen and (min-width : 150px) and (max-width : 780px)
 {
-    color:white;
-}
-.card
-{
-    border-radius: 12px;
-    margin-left:7px;
-}
-/* If you want hover effect */
-header ul li a.nav-link:hover
-{
-    background-color: white;
-	font-weight:bold;
-    border-radius:12px;
-	color:#6F69AC;
-}
-.search_bar{
-    border-top-left-radius:9px;
-    border-bottom-left-radius:9px;
-    padding: 4px;
-    width:660px;
-    height:38px;
-    border-style:none;
-    margin-top:4x;
-}
-.search_btn{
-    margin-right: 12px;
-    height:38.5px;
-    border-top-right-radius:9px;
-    border-bottom-right-radius:9px;
-    background-color:white;
-    border-style: none;
+  {}
+  .search
+  {
+    width: 95%;
+    margin: 0 auto;
+  }
+
 }
